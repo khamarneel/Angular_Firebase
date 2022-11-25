@@ -1,0 +1,50 @@
+<div class="form-container">
+  <form (submit)="loginUser()">
+    <h2 class="text-center"><b>Sign In</b></h2>
+    <br />
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        name="email"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="Enter email"
+        [(ngModel)]="user.email"
+      />
+      <small id="emailHelp" class="form-text text-muted"
+        >We'll never share your email with anyone else.</small
+      >
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input
+        type="password"
+        name="password"
+        class="form-control"
+        id="exampleInputPassword1"
+        placeholder="Password"
+        [(ngModel)]="user.password"
+      />
+    </div>
+    <div class="d-flex justify-content-between">
+      <button type="submit" class="btn btn-primary">Sign In</button>
+      <a class="p-2" [routerLink]="['/register']"
+        >Don't have account? Sign Up</a
+      >
+    </div>
+    <hr />
+    <img
+      width="100%"
+      height="65px"
+      (click)="loginWithGoogle()"
+      src="../../../assets/login_with_google.png"
+    />
+    <br />
+    <br />
+    <div *ngIf="error" class="alert alert-danger" role="alert">
+      {{ error }}
+    </div>
+  </form>
+</div>

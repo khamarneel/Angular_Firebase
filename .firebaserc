@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "khamar-d5d2e": {
+      "hosting": {
+        "angular-firebase": [
+          "khamar-d5d2e"
+        ]
+      }
+    }
+  }
+}

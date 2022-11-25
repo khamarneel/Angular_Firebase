@@ -1,0 +1,6 @@
+npm i firebase
+npm i -g firebase-tools@v3.17.2 || npm i -g firebase-tools
+If faced error running - firebase, npm i -g websocket-driver
+firebase login:ci
+firebase login --reauth
+ng add @angular/fire
